@@ -17,10 +17,11 @@ export const stageFour = {
     });
     const total = storage[from].itens.length;
 
-    return `🔔 *NOVO PEDIDO* 🔔: \n\n📞 Cliente: +${
+    return `🔔 *DADOS CONSULTA* 🔔: \n\n📞 Telefone Cliente: +${
       phone[0]
-    } \n🧁 Sabores: *${desserts}* \n📍 Endereço: *${address}* \n🚚 Taxa de entrega: *a confirmar*. \n💰 Valor dos bolos: *${
-      total * 6
-    },00 reais*. \n⏳ Tempo de entrega: *50 minutos*. \n🛑 Detalhes: *${message}*`;
+    } \n🧁 Especialidades: *${desserts}* \n📍 Dados Paciente: *${address}* \n🚚 Valor Consulta: *R$ 130,00*. \n💰 Tempo de Sessão: *${
+       50
+    }minutos*. \n⏳ Profissional: *Samara Oliveira Bordim*. \n🛑 Detalhes: *${message}*`;
   },
+  
 };
