@@ -4,18 +4,18 @@ import { storage } from '../storage.js';
 export const stageTwo = {
   exec({ from, message }) {
     const order =
-      '\n-----------------------------------\n#️⃣ - ```FINALIZAR pedido``` \n*️⃣ - ```CANCELAR pedido```';
+      '\n-----------------------------------\n#️⃣ - ```CONFIRMAR CONSULTA``` \n*️⃣ - ```CANCELAR CONSULTA```';
     if (message === '*') {
       storage[from].stage = 0;
       storage[from].itens = [];
 
-      return '🔴 Pedido *CANCELADO* com sucesso. \n\n ```Volte Sempre!```';
+      return '🔴 CONSULTA *CANCELADA* com sucesso. \n\n ```Obrigado por informar, aguardo seu retorno!```';
     } else if (message === '#') {
       storage[from].stage = 3;
 
       return (
-        '🗺️ Agora, informe o *ENDEREÇO*. \n ( ```Rua, Número, Bairro``` ) \n\n ' +
-        '\n-----------------------------------\n*️⃣ - ```CANCELAR pedido```'
+        '🗺️ Agora, informe os *Dados*. \n ( ```Nome, Idade, Queixa``` ) \n\n ' +
+        '\n-----------------------------------\n*️⃣ - ```Confirmar consulta```'
       );
     } else {
       if (!menu[message]) {
@@ -26,8 +26,8 @@ export const stageTwo = {
     storage[from].itens.push(menu[message]);
 
     return (
-      `✅ *${menu[message].description}* adicionado com sucesso! \n\n` +
-      '```Digite outra opção```: \n\n' +
+      `✅ *${menu[message].description}* Consulta agendada com sucesso! \n\n` +
+      '`Digite outra opção`: \n\n' +
       order
     );
   },

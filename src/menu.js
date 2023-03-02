@@ -1,22 +1,22 @@
 export const menu = {
   1: {
-    description: 'Leite Ninho',
+    description: 'Fonoaudiologia',
     price: 6,
   },
   2: {
-    description: 'Alpino',
+    description: 'Psicopedagogia',
     price: 6,
   },
   3: {
-    description: 'Prestígio',
+    description: 'Psicólogia ',
     price: 6,
   },
   4: {
-    description: 'Abacaxi',
+    description: 'Fisioterapia',
     price: 6,
   },
   5: {
-    description: 'Dois Amores',
+    description: 'Terapias Integrativas',
     price: 6,
   },
 };

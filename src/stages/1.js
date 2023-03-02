@@ -5,7 +5,7 @@ import { neighborhoods } from './neighborhoods.js';
 export const stageOne = {
   exec({ from, message, client }) {
     if (message === '1') {
-      let msg = '🚨  CARDÁPIO  🚨\n\n';
+      let msg = '🚨  Especialidade  🚨\n\n';
 
       Object.keys(menu).map((value) => {
         const element = menu[value];
@@ -23,15 +23,15 @@ export const stageOne = {
       });
 
       msg +=
-        '\nPara visualizar os bolos, *acesse*: https://wa.me/c/556884257619\n\n⚠️ ```APENAS UMA OPÇÃO POR VEZ``` ⚠️\n*Digite OPÇÃO referente ao produto ao qual deseja pedir:*';
+        '\nDuvidas ou Dificuldade Liguei *0119999-5624*:\n⚠️ ```APENAS UMA OPÇÃO POR VEZ``` ⚠️\n*Digite OPÇÃO referente ao produto ao qual deseja pedir:*';
       storage[from].stage = 2;
 
       return msg;
     } else if (message === '2') {
       return (
-        '\n-----------------------------------\n1️⃣ - ```FAZER PEDIDO``` \n0️⃣ - ```FALAR COM ATENDENTE```\n\n' +
+        '\n-----------------------------------\n1️⃣ - ```AGENDAR CONSULTAR``` \n0️⃣ - ```FALAR COM ATENDENTE```\n\n' +
         neighborhoods +
-        '\n-----------------------------------\n1️⃣ - ```FAZER PEDIDO``` \n0️⃣ - ```FALAR COM ATENDENTE``` '
+        '\n-----------------------------------\n1️⃣ - ```REMARCAR CONSULTA``` \n0️⃣ - ```FALAR COM ATENDENTE``` '
       );
     } else if (message === '0') {
       client.markUnseenMessage(from);

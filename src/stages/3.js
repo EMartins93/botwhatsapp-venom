@@ -7,7 +7,7 @@ export const stageThree = {
 
     if (message === '*') {
       storage[from].stage = 0;
-      return 'Pedido *CANCELADO* com sucesso. \n Volte Sempre!';
+      return 'Consulta *CANCELADA* com sucesso. \n Aguardo o seu retorno!';
     }
 
     let desserts = '';
@@ -23,12 +23,12 @@ export const stageThree = {
 
     await client.sendText(
       message.from,
-      `🗒️ *RESUMO DO PEDIDO*: \n\n🧁 Sabores: *${desserts}* \n🚚 Taxa de entrega: *a confirmar*. \n📍 Endereço: *${message}* \n💰 Valor dos bolos: *${
-        total * 6
-      },00 reais*. \n⏳ Tempo de entrega: *50 minutos*. \n\n` +
-        '🔊 ```Agora, informe a forma de pagamento e se vai precisar de troco, por gentileza.```'
+      `🗒️ *DADOS DA CONSULTA*: \n\n🥼 Profissional: *${desserts}* \n🚚 Local: *Clinica Girassol*. \n🎲 Nome: ${message} \n💰 Valor Consulta: *${
+        total * 130
+      },00 reais*. \n⏳ Tempo de sessão: *30 minutos*. \n\n` +
+        '🔊 ```Agora, informe a forma de pagamento e se vai (Debito,Crédito,PIX ou Convenio Médico)``'
     );
 
-    return '✅ *Prontinho, pedido feito!* \n\nAgora, se você ainda não sabe o valor da taxa de entrega para sua região, vou te passar para um atendente para que ele verique o valor da *taxa de entrega*. \n\n⏳ *Aguarde um instante*.';
+    return '✅ *Prontinho, Consulta Agendada!* \n\nAgora, lembre-se de avisar o profissional caso não consiga vir no dia agendado*. \n\n⏳ *Até Breve*.';
   },
 };
